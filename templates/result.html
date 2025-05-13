@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0056b3;
+           background-position: center;
+           background-repeat: no-repeat;    
+           background-size: cover;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        h2 {
+            color: #333;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 3px solid #007bff;
+        }
+        h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .predicted-class {
+            font-weight: bold;
+            color: #ff5733; /* Different color for prediction */
+        }
+        .confidence {
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .suggestions {
+            text-align: left;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <img src="{{ image }}" alt="Uploaded Image">
+        <h3>Predicted Class: <span class="predicted-class">{{ label }}</span></h3>
+        <div class="suggestions">
+            
+        </div>
+        <br>
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>
